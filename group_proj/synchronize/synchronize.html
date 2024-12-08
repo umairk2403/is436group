@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Synchronize Devices</title>
+  <style>
+    body {
+      background-color: #1e1e1e;
+      color: white;
+    }
+    .navbar img {
+      height: 180px; /* Increased logo size */
+      width: auto;
+    }
+    .container {
+      margin-top: 50px;
+      text-align: center;
+    }
+    .logo-section {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+    .logo-card {
+      background-color: #2a2a2a;
+      border: 2px solid #56c9b2;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 10px;
+      width: 200px;
+      text-align: center;
+    }
+    .logo-card img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+    .fitbit-logo {
+      max-width: 120%;
+      height: auto;
+    }
+    .logo-card a {
+      color: #56c9b2;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .logo-card a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      padding: 10px 0;
+      background-color: #1e1e1e;
+      color: #56c9b2;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container text-center">
+        <a href="../home.html">
+            <img src="../images/logo.png" alt="Company Logo"> <!-- Larger company logo -->
+        </a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>Synchronize Your Health Data</h1>
+    <p>Connect your favorite wearable devices and platforms to streamline your health tracking.</p>
+    
+    <div class="logo-section">
+      <div class="logo-card">
+        <img src="../images/google_logo.png" alt="Google Logo">
+        <a href="https://www.google.com/fit/" target="_blank">Connect Google Fit</a>
+      </div>
+      <div class="logo-card">
+        <img src="../images/apple_logo.webp" alt="Apple Health">
+        <a href="https://www.apple.com/health/" target="_blank">Connect Apple Health</a>
+      </div>
+      <div class="logo-card">
+        <img src="../images/samsung_logo.png" alt="Samsung Health">
+        <a href="https://www.samsung.com/us/support/owners/app/samsung-health" target="_blank">Connect Samsung Health</a>
+      </div>
+      <div class="logo-card">
+        <img class="fitbit-logo" src="../images/fitbit_logo.png" alt="Fitbit">
+        <a href="https://community.fitbit.com/t5/Community/ct-p/EN" target="_blank">Connect Fitbit</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 SmartHealth Tracker System. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

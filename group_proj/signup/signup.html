@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css"> 
+  <title>Sign Up</title>
+  <style>
+    body {
+      background-color: #1e1e1e; 
+      color: white; 
+    }
+    .navbar img {
+      height: 120px; 
+      width: auto;
+    }
+    .form-container {
+      background-color: #2a2a2a; 
+      padding: 20px;
+      border-radius: 10px;
+      border: 2px solid #56c9b2;
+      margin: 50px auto;
+      max-width: 400px;
+    }
+    .form-container h2 {
+      text-align: center;
+      color: #56c9b2;
+    }
+    .form-container button {
+      display: block;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container text-center">
+      <a href="../home.html">
+        <img src="../images/logo.png" alt="Company Logo"> 
+      </a>
+    </div>
+  </nav>
+
+  <div class="form-container">
+    <h2>Sign Up</h2>
+    <form action="signup.php" method="POST">
+      <div class="mb-3">
+        <label for="username" class="form-label">Username</label>
+        <input type="text" name="username" class="form-control" id="username" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" name="email" class="form-control" id="email" required>
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" name="password" class="form-control" id="password" required>
+      </div>
+      <button type="submit" class="btn">Sign Up</button>
+    </form>
+    <p class="mt-3 text-center">Already have an account? <a href="../login/login.html">Log In</a></p>
+  </div>
+
+
+  <footer>
+    <p>&copy; 2024 SmartHealth Tracker System. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
