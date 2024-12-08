@@ -20,4 +20,4 @@ jobs:
         with:
           context: new1/
           push: true
-          tags: umairk2403/new1:${{github.run_number}} 
+          tags: umairk2403/group_proj:${{github.run_number}} 
