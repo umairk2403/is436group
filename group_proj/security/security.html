@@ -68,33 +68,54 @@
     </a>
   </div>
 
-
   <div class="container">
     <h2>Manage Health Data</h2>
-    <form action="security.php" method="POST">
+    <form id="dataSharingForm">
       <p>Select which data you want to share:</p>
       <div class="checkbox-group">
         <label>
-          <input type="checkbox" name="shared_data[]" value="heart_rate"> Heart Rate
+          <input type="checkbox" name="shared_data" value="Heart Rate"> Heart Rate
         </label>
         <label>
-          <input type="checkbox" name="shared_data[]" value="steps"> Steps
+          <input type="checkbox" name="shared_data" value="Steps"> Steps
         </label>
         <label>
-          <input type="checkbox" name="shared_data[]" value="sleep_duration"> Sleep Duration
+          <input type="checkbox" name="shared_data" value="Sleep Duration"> Sleep Duration
         </label>
         <label>
-          <input type="checkbox" name="shared_data[]" value="calories"> Calories
+          <input type="checkbox" name="shared_data" value="Calories"> Calories
         </label>
       </div>
       <button type="submit" class="btn">Save Preferences</button>
     </form>
-  </div>
 
+    <div id="successMessage" style="display: none; margin-top: 20px;">
+      <p id="sharedDataOutput"></p>
+      <a href="../index.html" class="btn">Go to Home</a>
+    </div>
+  </div>
 
   <footer>
     <p>&copy; 2024 SmartHealth Tracker System. All Rights Reserved.</p>
   </footer>
+
+  <script>
+    document.getElementById('dataSharingForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const checkboxes = document.querySelectorAll('input[name="shared_data"]:checked');
+      const sharedData = Array.from(checkboxes).map(checkbox => checkbox.value);
+
+      if (sharedData.length > 0) {
+        const outputMessage = `You have successfully allowed us to share your data for: ${sharedData.join(', ')}.`;
+        document.getElementById('sharedDataOutput').textContent = outputMessage;
+      } else {
+        document.getElementById('sharedDataOutput').textContent = "You have not selected any data to share.";
+      }
+
+      document.getElementById('dataSharingForm').style.display = 'none';
+      document.getElementById('successMessage').style.display = 'block';
+    });
+  </script>
 </body>
 </html>
-
