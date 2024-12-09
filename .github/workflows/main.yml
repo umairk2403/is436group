@@ -18,6 +18,6 @@ jobs:
       - name: Build and push Docker images
         uses: docker/build-push-action@v4
         with:
-          context: new1/
+          context: group_proj
           push: true
           tags: umairk2403/group_proj:${{github.run_number}} 
