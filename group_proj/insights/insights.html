@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Health Insights</title>
+  <style>
+    body {
+      background-color: #1e1e1e; /* Dark gray background */
+      color: white; /* Default text color */
+    }
+    .navbar img {
+      height: 120px;
+      width: auto;
+    }
+    .container {
+      margin-top: 50px;
+      padding: 20px;
+      background-color: #2a2a2a; /* Slightly darker container */
+      border-radius: 10px;
+      border: 2px solid #56c9b2; /* Theme border */
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+    .container h1 {
+      color: #56c9b2; /* Theme color for headings */
+    }
+    .form-label {
+      margin-bottom: 10px;
+      font-size: 1rem;
+    }
+    .form-control {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #56c9b2;
+      background-color: #1e1e1e;
+      color: white;
+      font-size: 1rem; /* Increased font size */
+    }
+    .dropdown {
+      width: 48%;
+      display: inline-block;
+    }
+    .btn {
+      background-color: #56c9b2;
+      color: black;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background-color: white;
+      color: black;
+    }
+    footer {
+      text-align: center;
+      padding: 10px 0;
+      background-color: #1e1e1e;
+      color: #56c9b2;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container text-center">
+        <a href="../index.html">
+            <img src="../images/logo.png" alt="Company Logo"> 
+        </a>
+    </div>
+  </nav>
+
+
+  <div class="container">
+    <h1>Enter Your Details</h1>
+    <p>Provide your information to receive personalized health insights.</p>
+    
+
+    <form id="healthForm">
+      <label class="form-label">Height:</label>
+      <div>
+        <select id="heightFeet" name="heightFeet" class="form-control dropdown" required>
+          <option value="" disabled selected>Feet</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+        </select>
+        <select id="heightInches" name="heightInches" class="form-control dropdown" required>
+          <option value="" disabled selected>Inches</option>
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+        </select>
+      </div>
+
+      <label for="weight" class="form-label">Weight (lbs):</label>
+      <input type="number" id="weight" name="weight" class="form-control" required>
+
+      <label for="gender" class="form-label">Gender:</label>
+      <select id="gender" name="gender" class="form-control" required>
+        <option value="" disabled selected>Select your gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label for="age" class="form-label">Age:</label>
+      <input type="number" id="age" name="age" class="form-control" required>
+
+      <button type="submit" class="btn">Submit</button>
+    </form>
+
+    <div id="successMessage" style="display: none; margin-top: 20px;">
+      <p>Your data has been submitted successfully! Click below to view your health insights:</p>
+      <a href="health-insights.html" class="btn">View Health Insights</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 SmartHealth Tracker System. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('healthForm').addEventListener('submit', function(event) {
+      event.preventDefault(); 
+      document.getElementById('healthForm').style.display = 'none'; 
+      document.getElementById('successMessage').style.display = 'block'; 
+    });
+  </script>
+</body>
+</html>
+
